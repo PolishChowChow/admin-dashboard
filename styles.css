@@ -1,0 +1,78 @@
+:root{
+    --dark-blue: #0A2647;
+    --light-blue: #2C74B3;
+    --normal-dark-blue: #144272;
+    --normal-blue: #205295;
+    --light-asf: #ADD8E6;
+    --dark: #333;
+    --light: #DDD;
+}
+body{
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 25% 1fr;
+    grid-template-rows: 200px 1fr;
+}
+header.main{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    background-color: var(--light);
+    box-shadow: 2px 2px 5px gray;
+    position: relative;
+    z-index: 1;
+}
+aside.main{
+    grid-column: 1/2;
+    grid-row: 1/3;
+    background-color: var(--dark-blue);
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+aside.main header, aside.main main.body{
+    padding-left: 40px;
+    padding-bottom: 10px;
+}
+aside.main header h1{
+    font-size: 3rem;
+    transition: 0.2s all ease-in-out;
+}
+aside.main header h1:hover{
+    color: #AAA;
+    cursor: pointer;
+}
+aside.main main section.tasks .task{
+    background-color: var(--dark-blue);
+    width: 100%;
+    height: 100%;
+    transition: 0.2s all ease-in-out;
+    display: flex;
+}
+aside.main main section.tasks .task:hover{
+    margin-left: 30px;
+    cursor: pointer;
+    color: #AAA;
+}
+aside.main main section.tasks .task > section{
+    font-size: 2rem;
+}
+aside.main main section.tasks .task .icon{
+    width: 20%;
+}
+aside.main main section.tasks .task .content{
+    flex: 1;
+}
+aside.main footer{
+    text-align: center;
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+article{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    background-color: var(--light-asf);
+}
