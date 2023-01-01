@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,800;0,900;1,800;1,900&display=swap');
 :root{
     --dark-blue: #0A2647;
     --light-blue: #2C74B3;
@@ -6,11 +7,13 @@
     --light-asf: #ADD8E6;
     --dark: #333;
     --light: #DDD;
+    --smooth: 0.2s all ease-in-out;
 }
 body{
     min-height: 100vh;
     margin: 0;
     padding: 0;
+    font-family: 'Montserrat', sans-serif;
     display: grid;
     grid-template-columns: 25% 1fr;
     grid-template-rows: 200px 1fr;
@@ -18,10 +21,130 @@ body{
 header.main{
     grid-column: 2/3;
     grid-row: 1/2;
-    background-color: var(--light);
+    background-color: white;
     box-shadow: 2px 2px 5px gray;
     position: relative;
     z-index: 1;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 2fr 1fr;
+}
+header.main img:hover{
+    cursor: pointer;
+}
+header.main > section{
+    display: flex; 
+    align-items: center
+}
+header.main .searchbar{
+    grid-row: 1/2;
+    grid-column: 1/2;
+    justify-content: center;
+    padding-left: 40px;
+}
+header.main .searchbar .button{
+    padding: 5px;
+}
+header.main .searchbar .button button{
+    background-color: white;
+    outline: none;
+    border: none;
+}
+header.main .searchbar .button button:hover{
+    cursor: pointer;
+}
+header.main .searchbar .button button i{
+    font-size: 24px;
+}
+header.main .searchbar .input{
+    flex: 1;
+}
+header.main .searchbar .input input[type='text']{
+    background-color: #EEE;
+    border: 1px solid #EEE;
+    color: gray;
+    font-size: 20px;
+    padding: 5px 30px;
+    outline: none;
+    height: 40px;
+    width: 85%;
+    border-radius: 50px;
+}
+header.main .mini-profile{
+    grid-row: 1/2;
+    grid-column: 2/3;
+    justify-content: center;
+    gap: 30px;
+}
+header.main .mini-profile section{
+    width: 40%;
+}
+header.main .mini-profile .bell{
+    text-align: right;
+}
+header.main .mini-profile .bell i{
+    text-align: right;
+    font-size: 26px;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 50px;
+    transition: var(--smooth);
+}
+header.main .mini-profile .bell i:hover{
+    cursor: pointer;
+    background-color: var(--light);
+    border: 1px solid var(--light);
+    padding: 10px;
+}
+header.main .mini-profile .profile-icon{
+    width: 10%;
+}
+header.main .mini-profile .profile-icon img{
+    width: 50px;
+}
+header.main .mini-profile .username{
+    font-size: 24px;
+    font-weight: 500;
+}
+header.main .profile{
+    grid-row: 2/3;
+    grid-column: 1/2;
+    padding-left: 60px;
+}
+header.main .profile .icon{
+    width: 15%;
+}
+header.main .profile .icon img{
+    width: 70px;
+}
+header.main .profile .name{
+    width: 85%;
+}
+header.main .profile .name p{
+    margin-bottom: 2px;
+}
+header.main .profile .name h2{
+    margin-top: 2px;
+}
+header.main .buttons{
+    grid-row: 2/3;
+    grid-column: 2/3;
+    justify-content: space-between;
+    padding-right: 40px;
+}
+header.main .buttons button{
+    width: 120px;
+    height: 40px;
+    background-color: var(--dark-blue);
+    border: 2px solid var(--dark-blue);
+    color: white;
+    border-radius: 50px;
+    transition: var(--smooth);
+}
+header.main .buttons button:hover{
+    cursor: pointer;
+    background-color: white;
+    color: var(--dark-blue);
 }
 aside.main{
     grid-column: 1/2;
@@ -37,7 +160,7 @@ aside.main header, aside.main main.body{
 }
 aside.main header h1{
     font-size: 3rem;
-    transition: 0.2s all ease-in-out;
+    transition: 0.2s var(--smooth);
 }
 aside.main header h1:hover{
     color: #AAA;
@@ -47,7 +170,7 @@ aside.main main section.tasks .task{
     background-color: var(--dark-blue);
     width: 100%;
     height: 100%;
-    transition: 0.2s all ease-in-out;
+    transition: var(--smooth);
     display: flex;
 }
 aside.main main section.tasks .task:hover{
