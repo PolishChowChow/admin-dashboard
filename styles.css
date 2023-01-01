@@ -194,8 +194,130 @@ aside.main footer{
     align-items: flex-end;
     justify-content: center;
 }
-article{
+article.main{
     grid-column: 2/3;
     grid-row: 2/3;
     background-color: var(--light-asf);
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+article.main > main{
+    grid-row: 1/3;
+    grid-column: 1/2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: 230px 230px;
+    gap: 20px;
+    padding: 40px;
+}
+article.main > main > article{
+    background-color: white;
+    box-shadow: 2px 2px 5px gray;  
+    height: 200px;
+    padding: 10px 30px 10px;
+    border: 5px solid white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+article.main > main > article header{
+    height: 70%;
+}
+article.main > main > article footer{
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 10px;
+    padding-right: 20px;
+}
+article.main > main > article footer i{
+    font-size: 30px;
+    border: 1px solid white;
+    border-radius: 50px;
+    padding: 5px;
+    transition: var(--smooth);
+}
+article.main > main > article footer i:hover{
+    border: 1px solid var(--light);
+    background-color: var(--light);
+    cursor: pointer;
+}
+article.main > aside{
+    grid-row:1/3;
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    gap: 10px;
+    font-size: 14px;
+}
+article.main > aside{
+    grid-row:1/2;
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    gap: 10px;
+    font-size: 14px;
+}
+article.main > aside .box{
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px;
+}
+article.main > aside .box .announcement{
+    padding: 10px;
+}
+article.main > aside .box .announcement h3{
+    margin-bottom: 0;
+}
+article.main > aside .box .announcement p{
+    margin-top: 0;
+}
+article.main > aside{
+    grid-row:1/3;
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    gap: 10px;
+    font-size: 14px;
+}
+article.main > aside .box{
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px;
+}
+article.main > aside .contact{
+    display: flex;
+    gap: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 2px;
+    transition: var(--smooth);
+}
+.contact:hover{
+    cursor: pointer;
+    border-color: var(--light);
+    background-color: var(--light);
+}
+article.main > aside .contact .icon img{
+    width: 50px;
+}
+article.main > aside .contact .name{
+    flex: 1;
+}
+article.main > aside .contact .name .tag{
+    color: black;
+    font-weight: 500;
+}
+article.main > aside .contact .name .description{
+    color: gray;
 }
