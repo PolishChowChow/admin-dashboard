@@ -1,2 +1,2 @@
 # admin-dashboard
-This project shows my abilites with using grid in practice. I hope you enjoy it.
+This project shows that I learned how to use grid in practice in order to make page more responsive and easier to layout.
